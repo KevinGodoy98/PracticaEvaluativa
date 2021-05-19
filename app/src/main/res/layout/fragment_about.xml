@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="nombre"
+            type="String" />
+        <variable
+            name="direccion"
+            type="String" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context=".FragmentRegistro">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tableLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2"
+            android:gravity="center"
+            android:useDefaultMargins="true"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:id="@+id/txt_saludo"
+                android:layout_width="430dp"
+                android:layout_height="26dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="Perfil usuario"
+                android:textFontWeight="300"
+                android:textSize="40px"
+                app:layout_constraintBottom_toTopOf="@+id/lbl_nombre"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lbl_nombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                app:layout_constraintBottom_toTopOf="@+id/txt_nombre"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_saludo" />
+
+            <TextView
+                android:id="@+id/txt_nombre"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="18dp"
+                android:text="@={nombre}"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/txt_direccion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_nombre" />
+
+            <TextView
+                android:id="@+id/lbl_direccion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Direccion:"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_nombre" />
+
+            <TextView
+                android:id="@+id/txt_direccion"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="314dp"
+                android:text="@={direccion}"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_nombre" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
